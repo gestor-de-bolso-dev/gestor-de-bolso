@@ -1,0 +1,318 @@
+/* ============================================================================
+   Design Tokens CSS Variables
+   Gestor de Bolso — Campaign Analysis Platform
+   ============================================================================ */
+
+:root {
+  /* ========================================================================
+     COLOR TOKENS
+     ======================================================================== */
+
+  /* Semantic Colors */
+  --color-primary: #2563eb;
+  --color-primary-light: #eff6ff;
+  --color-primary-dark: #1d4ed8;
+
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+
+  --color-warning: #ea580c;
+  --color-warning-light: #ffedd5;
+
+  --color-danger: #dc2626;
+  --color-danger-light: #fee2e2;
+
+  /* Neutral Colors */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-600: #4b5563;
+  --color-neutral-900: #111827;
+
+  /* Surface Colors */
+  --color-surface-background: #ffffff;
+  --color-surface-background-subtle: #f9fafb;
+  --color-surface-border: #e5e7eb;
+
+  /* ========================================================================
+     TYPOGRAPHY TOKENS
+     ======================================================================== */
+
+  --font-family-base: system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+  --font-family-mono: "Menlo", "Monaco", "Courier New", monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 3rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ========================================================================
+     SPACING TOKENS (8px base grid)
+     ======================================================================== */
+
+  --spacing-0: 0;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* ========================================================================
+     BORDER TOKENS
+     ======================================================================== */
+
+  --border-radius-none: 0;
+  --border-radius-sm: 0.25rem;
+  --border-radius-base: 0.5rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  --border-width-thin: 1px;
+  --border-width-base: 1px;
+  --border-width-thick: 2px;
+
+  /* ========================================================================
+     SHADOW TOKENS
+     ======================================================================== */
+
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* ========================================================================
+     COMPONENT TOKENS
+     ======================================================================== */
+
+  /* Button */
+  --button-padding: 0.75rem 1.5rem;
+  --button-border-radius: 0.5rem;
+  --button-font-weight: 500;
+  --button-transition: all 0.2s ease;
+
+  --button-primary-bg: #2563eb;
+  --button-primary-text: #ffffff;
+  --button-primary-hover-bg: #1d4ed8;
+
+  --button-secondary-bg: #f3f4f6;
+  --button-secondary-text: #111827;
+  --button-secondary-hover-bg: #e5e7eb;
+
+  --button-danger-bg: #dc2626;
+  --button-danger-text: #ffffff;
+  --button-danger-hover-bg: #b91c1c;
+
+  /* Input */
+  --input-padding: 0.75rem 1rem;
+  --input-border-radius: 0.5rem;
+  --input-border-width: 1px;
+  --input-border-color: #e5e7eb;
+  --input-focus-border-color: #2563eb;
+  --input-font-size: 1rem;
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border-radius: 0.75rem;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --card-padding: 1.5rem;
+
+  /* ========================================================================
+     MOTION TOKENS
+     ======================================================================== */
+
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-slow: 300ms;
+
+  --motion-easing-linear: linear;
+  --motion-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   Typography Utility Classes
+   ============================================================================ */
+
+.text-heading-1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+.text-heading-2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.text-heading-3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.text-body-lg {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text-body-sm {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+/* ============================================================================
+   Base Styles Using Tokens
+   ============================================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-base);
+  color: var(--color-neutral-900);
+  background-color: var(--color-surface-background);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-50);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+p {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-neutral-600);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  transition: var(--button-transition);
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  padding: var(--input-padding);
+  border-radius: var(--input-border-radius);
+  border: var(--border-width-base) solid var(--input-border-color);
+  transition: border-color var(--motion-duration-base) var(--motion-easing-ease-in-out);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ============================================================================
+   Focus Visible for Accessibility
+   ============================================================================ */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   Dark Mode Support (Future Enhancement)
+   ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface-background: #1f2937;
+    --color-surface-background-subtle: #111827;
+    --color-neutral-900: #f3f4f6;
+    --color-neutral-600: #d1d5db;
+  }
+
+  body {
+    background-color: var(--color-surface-background);
+    color: var(--color-neutral-900);
+  }
+}
+
+/* ============================================================================
+   Print Styles
+   ============================================================================ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
